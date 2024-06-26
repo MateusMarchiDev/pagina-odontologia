@@ -7,7 +7,7 @@ import { LentesContatoComponent } from './lentes-contato/lentes-contato.componen
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'clareamento-dental', component: ClareamentoDentalComponent },
   { path: 'implante-dentario', component: ImplanteDentarioComponent },

@@ -1,1 +1,301 @@
-/* You can add global styles to this file, and also import other style files */
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap";
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+nav {
+  background-color: rgb(29, 124, 172);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+}
+
+.logo-menu {
+  padding-left: 50px;
+  width: 70px;
+  height: 60px;
+}
+
+nav > div {
+  display: flex;
+  gap: 20px;
+}
+
+nav > div > a {
+  text-decoration: none;
+  color: white;
+}
+
+.text-container {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.text-container > p {
+  font-family: "Roboto", sans-serif;
+  color: rgb(50, 48, 48);
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.text-container .link-whats {
+  margin-top: 10px;
+  display: block;
+  align-self: center;
+}
+
+.link-whats > img {
+  width: 300px;
+}
+
+.img-dentista {
+  flex: 1;
+  display: flex;
+  padding-right: 70px;
+  justify-content: flex-end;
+}
+
+.img-dentista > img {
+  width: 300px;
+}
+
+.section-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+.section-2 {
+  background-color: rgb(239, 240, 238);
+  text-align: center;
+}
+
+.section-2 > h2 {
+  color: rgb(50, 48, 48);
+  padding-top: 25px;
+  margin-bottom: 10px;
+}
+
+.servicos {
+  cursor: pointer;
+  background-color: rgb(84, 145, 196);
+  box-shadow: 2px 3px 5px rgba(157, 156, 156, 0.7);
+  width: 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+
+.servicos > img {
+  width: 220px;
+  height: 140px;
+  border-radius: 8px;
+  padding-bottom: 10px;
+}
+
+.servicos > p {
+  text-align: center;
+  font-weight: 700;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.servicos-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+.section-3 {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+}
+
+.slider {
+  width: 95%;
+  max-width: 95%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 2s ease-in-out;
+}
+
+.slide {
+  min-width: 95%;
+  height: 250px;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Alinha os itens horizontalmente ao centro */
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.imag1{
+  background-image: url('/assets/homem-feliz.jpg');
+}
+.imag2{
+  background-image: url('/assets/mulher.jpg');
+}
+.imag3{
+  background-image: url('assets/sorriso.jpg');
+}
+.slide > .img-fundo{
+  width: 120px; /* Defina a largura desejada */
+  height: 120px; /* Defina a altura desejada */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.nome-cliente{
+  font-weight: 600;
+  margin:8px 0;
+}
+footer{
+  background-color: rgb(84, 145, 196);
+}
+.img-redes{
+  padding-left: 5px;
+  width: 35px;
+}
+.siga-redes {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;;
+}
+
+.siga-redes p {
+  margin: 0 10px;
+  color: white;
+  padding-left: 12px;
+}
+.endereco{
+  margin: 0 10px;
+  padding: 8px 0px 0px 12px;
+  font-size: 12px;
+  color: white;
+}
+.copyright{
+  width: 99%;
+  text-align: center;
+  padding-bottom: 5px;
+}
+.copyright > p{
+  font-size: 12px;
+  color: rgb(225, 217, 217);
+}
+
+@media (max-width: 550px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+  }
+
+  nav > img {
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+
+  nav > div {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav > div > a {
+    margin-bottom: 10px;
+  }
+  .logo-menu{
+    padding-left: 0px;
+  }
+  .section-1 {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .text-container, .img-dentista {
+    width: 98%;
+    text-align: center;
+  }
+
+  .text-container {
+    align-items: center;
+  }
+  .text-container > p{
+    font-size: 32px;
+  }
+  .link-whats > img {
+    width: 250px;
+  }
+  .img-dentista {
+    margin-bottom: 20px;
+    padding-right: 10px;
+  }
+
+  .img-dentista > img {
+    width: 98%;
+    max-width: 250px;
+  }
+
+  .servicos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicos {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  .slide {
+    min-width: 100%;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .siga-redes {
+    flex-direction: column;
+    align-items: center;
+  }
+  .siga-redes p {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .siga-redes a {
+    margin: 0 5px;
+  }
+  .endereco {
+    text-align: center;
+    margin: 10px 0;
+  }
+}

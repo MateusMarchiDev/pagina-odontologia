@@ -1,0 +1,64 @@
+.clareamento-dentario{
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.clareamento-dentario > img{
+  width: 830px;
+  height: 300px;
+}
+#clareamento{
+  color: rgb(29, 124, 172);
+}
+div > h2{
+  text-align: center;
+  margin-top: 10px;
+}
+div > .texto-clareamento{
+  margin: 0 auto;
+}
+.texto-clareamento{
+  width: 80vw;
+}
+.texto-clareamento > p{
+  text-indent: 30px;
+}
+.titulo{
+  color: rgb(20, 113, 159);
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 0;
+}
+.espaco-linha{
+  padding: 4px 0;
+}
+.destaque{
+  font-weight: 700;
+  color: rgb(39, 138, 187);
+}
+#paragrafo-final{
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+#paragrafo-final > a{
+  color: rgb(20, 113, 159);
+  text-decoration: none;
+}
+ul {
+  list-style-type: square; /* Tipo de marcador: square, circle, disc, etc. */
+  padding-left: 20px; /* Espaçamento à esquerda da lista */
+}
+@media (max-width: 500px) {
+  .clareamento-dentario > img{
+    width: 380px;
+    height: 160px;
+  }
+  .titulo{
+    text-align: center;
+  }
+  #paragrafo-final{
+    font-size: 16px;
+    text-align: center;
+  }
+}

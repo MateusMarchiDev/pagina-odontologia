@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { AfterViewInit, Component, OnDestroy } from '@angular/core';
+import { AnimationStateService } from '../animation-state.service';
 
 @Component({
   selector: 'app-home',
@@ -32,6 +33,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   private slides!: HTMLElement[];
   private slideInterval: any;
 
+  constructor(public animationState: AnimationStateService) {}
   ngOnDestroy(): void {
     clearInterval(this.slideInterval);
     window.removeEventListener('resize', this.updateSlideWidth.bind(this));
@@ -40,6 +42,11 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     this.slides = Array.from(document.querySelectorAll('.slide'));
     this.startSlideShow();
     window.addEventListener('resize', this.updateSlideWidth.bind(this));
+    setTimeout(() => {
+      this.animationState.textContainerAnimated = true;
+      this.animationState.imgDentistaAnimated = true;
+      this.animationState.section2Animated = true;
+    }, 0);
   }
 
 

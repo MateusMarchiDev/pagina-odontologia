@@ -1,14 +1,14 @@
 <main>
   <section class="section-1">
-    <div class="text-container" @fadeInLeft>
+    <div class="text-container" [@fadeInLeft]="animationState.textContainerAnimated ? 'in' : 'void'">
       <p>Agende sua consulta grátis agora!</p>
       <a href="" class="link-whats"><img src="../assets/btn-agendar.png" alt=""></a>
     </div>
-    <div class="img-dentista" @fadeInRight>
+    <div class="img-dentista" [@fadeInRight]="animationState.imgDentistaAnimated ? 'in' : 'void'">
       <img src="../assets/dentista.png" alt="">
     </div>
   </section>
-  <section class="section-2" @fadeInUp>
+  <section class="section-2" [@fadeInUp]="animationState.section2Animated ? 'in' : 'void'">
     <h2>Conheça mais sobre nossos principais Serviços</h2>
     <div class="servicos-container">
       <div class="servicos" [routerLink]="['/clareamento-dental']">

@@ -1,9 +1,30 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [
+    trigger('fadeInLeft', [
+      state('void', style({ opacity: 0, transform: 'translateX(-100%)' })),
+      transition(':enter', [
+        animate('1.7s ease-out', style({ opacity: 1, transform: 'translateX(0)' }))
+      ])
+    ]),
+    trigger('fadeInRight', [
+      state('void', style({ opacity: 0, transform: 'translateX(100%)' })),
+      transition(':enter', [
+        animate('2s ease-out', style({ opacity: 1, transform: 'translateX(0)' }))
+      ])
+    ]),
+    trigger('fadeInUp', [
+      state('void', style({ opacity: 0, transform: 'translateY(100%)' })),
+      transition(':enter', [
+        animate('2.7s ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+      ])
+    ])
+  ]
 })
 export class HomeComponent implements AfterViewInit, OnDestroy {
 
